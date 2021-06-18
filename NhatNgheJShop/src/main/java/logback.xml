@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<!-- <property name="LOGDIR" value="C:\\Users\\Admin\\Desktop\\Trainning Java Web Developer\\" /> -->
+	
+	<appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>
+				%d{HH:mm:ss.SSS} [%thread] %-5level %-40logger{36} : %msg%n  
+				<!-- dateTime, thread name, log level, logger name, message , new line -->
+				<!-- 
+					 5: mininum field width
+					-5level									logger{40}
+					- left justification flag 				logger name wil be abbreviated if longer 
+															then 40 characters 
+				 -->
+			</pattern>
+		</encoder> 
+	</appender>
+	
+	<!--  <appender name="File" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>C:\\Users\\Admin\\Desktop\\Trainning Java Web Developer\\Eshop.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%-4relative [%thread] %-5level %logger{40} : %msg%n</pattern>
+        </encoder>
+        
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+        	 <fileNamePattern>C:\\Users\\Admin\\Desktop\\Trainning Java Web Developer\\Eshop-%d{yyyy-MM-dd}.%i.log</fileNamePattern> 
+        	 <maxFileSize>10KB</maxFileSize>
+        	 <maxHistory>5</maxHistory>  default 7days 
+        	 <cleanHistoryOnStart>true</cleanHistoryOnStart>
+        </rollingPolicy>
+        
+    </appender> --> 
+	
+	<!-- <logger name="com.eshop.admin.controller" level="TRACE" />
+	<logger name="com.eshop.admin.controller" level="INFO" />
+	<logger name="com.eshop.admin.controller" level="DEBUG" />   -->
+	
+	<root level="INFO">
+		<appender-ref ref="Console"/>
+		<!-- <appender-ref ref="File"/>		 -->
+	</root>
+</configuration>
